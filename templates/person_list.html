@@ -1,0 +1,69 @@
+{% extends 'base.html' %} {% block bodyblock %}
+<!-- 12 -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <br /><br />
+      <h3 class="display-8">Person List</h3>
+      <p>
+        Here all person that recognize from Face Recognition and person
+        correspondent data listed.
+      </p>
+
+      <p style="color: blue">
+        Please refresh the browser if image not loaded properly
+      </p>
+
+      <!-- reporting -->
+      <hr />
+      <br />
+      <table class="table table-hover table-striped">
+        <tr>
+          <th>Person ID</th>
+          <th>Person</th>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Age</th>
+          <th>Occupation</th>
+          <th>Sleep Duration</th>
+          <th>Sleep Quality</th>
+          <th>Physical Activity Level</th>
+          <th>Stress Level</th>
+          <th>BMI Category</th>
+          <th>Blood Pressure</th>
+          <th>Heart Rate</th>
+          <th>Daily Steps</th>
+          <th>Sleep Disorder</th>
+        </tr>
+        {% for person in person_list %}
+        <tr>
+          <td>{{ person[0] }}</td>
+          <td>
+            <img
+              src="/static/images/person/{{ person[0] }}_{{ person[1] }}.jpg"
+              class="image-fluid"
+              width="100"
+              alt=""
+            />
+          </td>
+          <td>{{ person[14] }}</td>
+          <td>{{ person[2] }}</td>
+          <td>{{ person[3] }}</td>
+          <td>{{ person[4] }}</td>
+          <td>{{ person[5] }}</td>
+          <td>{{ person[6] }}</td>
+          <td>{{ person[7] }}</td>
+          <td>{{ person[8] }}</td>
+          <td>{{ person[9] }}</td>
+          <td>{{ person[10] }}</td>
+          <td>{{ person[11] }}</td>
+          <td>{{ person[12] }}</td>
+          <td>{{ person[13] }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -3,6 +3,8 @@ import cv2
 from app.face_recognition import faceRecognitionPipeline
 from flask import render_template, request
 import matplotlib.image as matimg
+import sqlite3
+import pandas as pd
 
 
 UPLOAD_FOLDER = 'static/upload'
@@ -14,6 +16,26 @@ def index():
 def app():
     return render_template('app.html')
 
+def person_list():
+    try:
+        sqliteConnection = sqlite3.connect('database/userfr_fatigueanal.db', timeout=1000)
+ 
+        print("Connected to SQLite")
+
+        sqlite_select_query = """SELECT * from user_data"""
+
+        df = pd.read_sql(sqlite_select_query, sqliteConnection)
+        df['name'] = df['user_name'].replace('_', ' ', regex=True).str.title()
+        person_list = df.values.tolist()
+        
+    except sqlite3.Error as error:
+        print("Failed to read data from sqlite table", error)
+    finally:
+        if sqliteConnection:
+            sqliteConnection.close()
+            print("The Sqlite connection is closed")
+
+    return render_template('person_list.html', person_list=person_list)
 
 def genderapp():
     if request.method == 'POST':
