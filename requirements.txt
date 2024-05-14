@@ -41,3 +41,4 @@ werkzeug==2.3.8
 wheel==0.43.0
 zipp==3.17.0
 gunicorn
+ca-certificates
