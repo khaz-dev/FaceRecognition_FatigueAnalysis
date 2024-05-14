@@ -1,1 +1,3 @@
 *.pyc
+facerec_fatanal_flask/
+pycache
