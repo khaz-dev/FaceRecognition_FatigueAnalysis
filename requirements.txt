@@ -1,6 +1,7 @@
 pip==24.0
 click
 cmake
+dlib
 colorama
 contourpy==1.1.1
 cycler
