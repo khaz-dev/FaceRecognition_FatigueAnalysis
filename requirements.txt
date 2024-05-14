@@ -1,4 +1,3 @@
-ca-certificates==2024.3.11
 click==8.1.7
 cmake==3.29.3
 colorama==0.4.6
