@@ -1,5 +1,4 @@
 import numpy as np
-import sklearn
 import pickle
 import cv2
 from ml.helper_functions import resize_foto

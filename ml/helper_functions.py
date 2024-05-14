@@ -1,5 +1,4 @@
-import cv2
-import numpy as np
+
 
 def resize_foto(width, height, max_width = 600):
   # max_width = in pixels. define the maximum width of the processed video.

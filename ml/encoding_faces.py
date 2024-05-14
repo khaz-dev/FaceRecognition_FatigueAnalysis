@@ -1,10 +1,6 @@
 import cv2
-import numpy as np
 import os
-from PIL import Image
 import pickle
-import dlib
-import sys
 import imutils
 import face_recognition
 
