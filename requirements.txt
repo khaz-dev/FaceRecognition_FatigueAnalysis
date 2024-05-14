@@ -31,7 +31,6 @@ scikit-learn
 scipy
 setuptools
 six
-sqlite
 threadpoolctl
 tzdata
 vc
