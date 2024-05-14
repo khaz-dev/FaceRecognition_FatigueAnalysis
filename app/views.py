@@ -1,10 +1,11 @@
 import os
 import cv2
-from app.face_recognition import faceRecognitionPipeline
+from ml.face_recognitions import faceRecognitionPipeline
 from flask import render_template, request
 import matplotlib.image as matimg
 import sqlite3
 import pandas as pd
+import pickle
 
 
 UPLOAD_FOLDER = 'static/upload'
@@ -12,9 +13,6 @@ UPLOAD_FOLDER = 'static/upload'
 def index():
     return render_template('index.html')
 
-
-def app():
-    return render_template('app.html')
 
 def person_list():
     try:
@@ -37,7 +35,9 @@ def person_list():
 
     return render_template('person_list.html', person_list=person_list)
 
-def genderapp():
+def fatigue_analysis():
+    fatigue_model = "model/fatigue_anal_model.pkl"
+
     if request.method == 'POST':
         f = request.files['image_name']
         filename = f.filename
@@ -53,25 +53,56 @@ def genderapp():
         report = []
         for i , obj in enumerate(predictions):
             gray_image = obj['roi'] # grayscale image (array)
-            eigen_image = obj['eig_img'].reshape(100,100) # eigen image (array)
-            gender_name = obj['prediction_name'] # name 
-            score = round(obj['score']*100,2) # probability score
+            user_name = obj['prediction_name'] # name 
+            # score = round(obj['score']*100,2) # probability score
             
             # save grayscale and eigne in predict folder
-            gray_image_name = f'roi_{i}.jpg'
-            eig_image_name = f'eigen_{i}.jpg'
-            matimg.imsave(f'./static/predict/{gray_image_name}',gray_image,cmap='gray')
-            matimg.imsave(f'./static/predict/{eig_image_name}',eigen_image,cmap='gray')
+            gray_image_name = f'face_roi_{i}.jpg'
+            matimg.imsave(f'./static/predict/{gray_image_name}',gray_image)
+
+
+            # Load data from database
+            print(user_name)
+            user_name = user_name.split('/')[-1]
+            print(user_name)
+            # Search Data in Database base on username
+            try:
+                sqliteConnection = sqlite3.connect('database/userfr_fatigueanal.db', timeout=1000)
+
+                print("Connected to SQLite")
+
+                sqlite_select_query = f"""SELECT * from user_data WHERE user_name ='{user_name}'"""
+
+                df = pd.read_sql(sqlite_select_query, sqliteConnection)
+                data = df.drop(['user_id', 'user_name'], axis='columns')
+                data.rename(columns={'gender': 'Gender', 'age': 'Age', 'occupation': 'Occupation', 'sleep_duration': 'Sleep Duration', 'quality_sleep': 'Quality of Sleep', 'physical_activity': 'Physical Activity Level', 'stress_level': 'Stress Level', 'bmi_category': 'BMI Category', 'blood_pressure': 'Blood Pressure', 'heart_rate': 'Heart Rate', 'daily_steps': 'Daily Steps', 'sleep_disorder': 'Sleep Disorder'}, inplace=True)
+
+            except sqlite3.Error as error:
+                print("Failed to read data from sqlite table", error)
+            finally:
+                if sqliteConnection:
+                    sqliteConnection.close()
+                    print("The Sqlite connection is closed")
+
+            # Do Fatigue Analysis
+            # Load Model
+            if len(data) == 0 :
+                fatigue_level = [0]
+            else :
+                model = pickle.load(open(fatigue_model, 'rb'))
+                fatigue_level = model.predict(data)
+                print(fatigue_level)
+                fatigue_level = fatigue_level + 1
+                print(fatigue_level)
+
+
             
+            user_name = user_name.replace('_',' ').title()
+
             # save report 
             report.append([gray_image_name,
-                           eig_image_name,
-                           gender_name,
-                           score])
-            
+                           user_name,
+                           fatigue_level[0]])      
         
-        return render_template('gender.html',fileupload=True,report=report) # POST REQUEST
-            
-    
-    
-    return render_template('gender.html',fileupload=False) # GET REQUEST
+        return render_template('fatigue_analysis.html',fileupload=True,report=report) # POST REQUEST
+    return render_template('fatigue_analysis.html',fileupload=False) # GET REQUEST
