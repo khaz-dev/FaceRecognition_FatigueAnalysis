@@ -44,3 +44,4 @@ vs2015_runtime=14.27.29016=h5e58377_2
 werkzeug=2.3.8=py39haa95532_0
 wheel=0.43.0=py39haa95532_0
 zipp=3.17.0=py39haa95532_0
+gunicorn
