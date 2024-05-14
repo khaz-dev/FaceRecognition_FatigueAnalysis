@@ -18,6 +18,8 @@ kiwisolver
 markupsafe
 matplotlib
 numpy
+python==3.9
+python-dateutil
 opencv-contrib-python
 openssl
 packaging
@@ -25,8 +27,6 @@ pandas
 pillow
 pip
 pyparsing
-python
-python-dateutil
 pytz
 scikit-learn
 scipy
