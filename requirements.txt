@@ -1,5 +1,7 @@
-pip==24.0
+
 click
+cmake==3.25.2
+dlib==19.24.2
 colorama
 contourpy==1.1.1
 cycler
