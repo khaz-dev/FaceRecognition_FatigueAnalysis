@@ -10,7 +10,14 @@ This face recognition web app is integrated with machine learning model. Here us
 4. Fatigue Analysis(Done)
 5. Integrasi Sistem(Done)
 6. Deployment(Done)
-   Under Maintanance
+   Deployment Aways Error, may be because face_recognition and opencv package, even i got some problem  when want to implement Deep Learning using it without conda.
+My problem i only can deploy on Railway App because it's free, I can deploy it on Server or Cloud server, but I have not enough money and my trial has gone, please understanding.
+
+Sorry if i take longer time because i try using all Algorithm Possible,
+and mostly using deep learning hope to get better result but it take long time and much resource
+
+For Fatigue Analysis, i using Up to Date Sleep Health and Lifestyle Analysis from Kaggle <https://www.kaggle.com/code/giulianoverdone/up-to-date-sleep-health-and-lifestyle-analysis/input/>, Because in the data still no label so I do Unsupervised learning to create Cluster then for the cluster i determine which cluster have Fit to Fatigue level, using K-Prototypes to mix Numerical and Categorical data to do clustering, and for Face Recognation i user Deep Learning package face_recognition and Data from Face Recognation i use hollywood artis foto, you can see al from this github. Take long to me to encoding Person Face Data (actually artist) and it take hours. Fatigue Analysis I Using Logistic Regression then boosting the result Classifier result usign HistGradientBoostingClassifier.
+you can se the proses and result on Project Output.
 
 
 ### Project Output
