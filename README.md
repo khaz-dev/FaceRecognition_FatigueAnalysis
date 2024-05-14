@@ -5,7 +5,7 @@ This face recognition web app is integrated with machine learning model. Here us
 - **Project URL**:  <https://khaz-facerec-fatigue-analysis.up.railway.app/> (Under Maintanance)
 
 1. Desain Database (Done)
-   I design database table to store user data with column :  Person ID, Person, Name, GFender, Age, Occupation, Sleep Duration, Sleep Quality, Physical Activity Level, Stress Level, BMI Category, Blood Pressure, Heart Rate, Daily Steps and Sleep Disorder. You can see detail data on Person Tab
+   I design database table to store user data with column :  Person ID, Person, Name, GFender, Age, Occupation, Sleep Duration, Sleep Quality, Physical Activity Level, Stress Level, BMI Category, Blood Pressure, Heart Rate, Daily Steps and Sleep Disorder. You can see detail data on Person Tab.
 3. Pengumpulan Dataset(Done)
 4. Face Recognition(Done)
 5. Fatigue Analysis(Done)
@@ -23,24 +23,35 @@ Data from Face Recognation i use hollywood artis foto, you can see all from this
 you can se the proses and result on Project Output.
 
 ## Deployment Process (Local)
-Yout need Python version 3.9
+Yout need Python version 3.9 to run this
 1. Create environment, on project directory open command prompt
 ```python
 python -m venv myenv
 ```
-2. Install Packages
+2. Activate the virtual environment
+```python
+.\myenv\Scripts\activate
+```
+3. Install Packages
 ```python
 pip install -r requirements.txt
 ```
-3. After all the packages installed. Run the code
+4. After all the packages installed. Run the code
 ```python
 python main.py
 ```
+
+Then local server running and run the Web App.
+Usually on Local (http://127.0.0.1:5000)
+
+
 
 ## Project Preview
 ![image](https://github.com/khaz-dev/facerec_fatiganal_app/blob/main/preview/preview_1.png)
 ![image](https://github.com/khaz-dev/facerec_fatiganal_app/blob/main/preview/preview_2.png)
 ![image](https://github.com/khaz-dev/facerec_fatiganal_app/blob/main/preview/preview_3.png)
+
+
 
 ### Deployment
 ![image](https://user-images.githubusercontent.com/75901421/184639715-7b4ba26c-6fb8-4157-8819-233b06dedb77.png)
