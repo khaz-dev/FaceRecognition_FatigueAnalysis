@@ -34,7 +34,6 @@ six
 threadpoolctl
 tzdata
 vc
-vs2015_runtime
 werkzeug
 wheel
 zipp
