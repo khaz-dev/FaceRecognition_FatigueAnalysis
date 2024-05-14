@@ -1,7 +1,7 @@
 click
 cmake
 colorama
-contourpy
+contourpy==1.2.1
 cycler
 dlib
 face-recognition
