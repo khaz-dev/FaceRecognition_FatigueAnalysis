@@ -19,7 +19,7 @@ kiwisolver
 markupsafe
 matplotlib
 numpy
-python==3.9
+python==3.8
 python-dateutil
 opencv-contrib-python
 pyopenssl
