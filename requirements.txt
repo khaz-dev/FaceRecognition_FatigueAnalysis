@@ -1,13 +1,9 @@
 pip==24.0
 click
-cmake
-dlib
 colorama
 contourpy==1.1.1
 cycler
-dlib
 face-recognition
-face-recognition-models
 flask
 fonttools
 importlib-metadata
