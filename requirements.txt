@@ -22,7 +22,7 @@ numpy
 python==3.9
 python-dateutil
 opencv-contrib-python
-openssl
+pyopenssl
 packaging
 pandas
 pillow
