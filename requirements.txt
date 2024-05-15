@@ -1,4 +1,4 @@
---upgrade pip
+pip==24.0
 blinker==1.8.2
 click==8.1.7
 cmake==3.29.3
