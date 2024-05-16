@@ -4,7 +4,7 @@ cycler==0.11.0
 Flask==2.0.3
 fonttools==4.30.0
 CMake
-dlib @ https://files.pythonhosted.org/packages/dc/15/cad179907ee9f9c635f3513048e28a6f1954c79fcba1492ac1e81d15a9d6/dlib_bin-19.24.2.post1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+dlib @ https://github.com/davisking/dlib
 face_recognition
 itsdangerous==2.1.1
 Jinja2==3.0.3
