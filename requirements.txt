@@ -3,7 +3,7 @@ colorama==0.4.4
 cycler==0.11.0
 Flask==2.0.3
 fonttools==4.30.0
-cmake @ https://files.pythonhosted.org/packages/12/51/08e6b42071ab25bc80c304b56d882eb1f3d810981cc8eed8635bc0db97df/cmake-3.29.3-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+cmake @ https://files.pythonhosted.org/packages/0f/6e/aec230302433cf697928be1311d783512dce582e39167c70a7581a21eb77/cmake-3.29.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
 dlib
 face_recognition
 itsdangerous==2.1.1
