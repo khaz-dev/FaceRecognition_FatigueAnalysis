@@ -62,15 +62,12 @@ def fatigue_analysis():
 
 
             # Load data from database
-            print(user_name)
-            user_name = user_name.split('/')[-1]
-            print(user_name)
             # Search Data in Database base on username
             try:
                 sqliteConnection = sqlite3.connect('database/userfr_fatigueanal.db', timeout=1000)
 
                 print("Connected to SQLite")
-
+                print('user_name : ', user_name)
                 sqlite_select_query = f"""SELECT * from user_data WHERE user_name ='{user_name}'"""
 
                 df = pd.read_sql(sqlite_select_query, sqliteConnection)
@@ -85,15 +82,22 @@ def fatigue_analysis():
                     print("The Sqlite connection is closed")
 
             # Do Fatigue Analysis
+            # See Data searched
+            print('type data : ', type(data))
+            print('data content : ', data)
             # Load Model
             if len(data) == 0 :
+                print('No data to Fatigue Analysis')
                 fatigue_level = [0]
             else :
                 model = pickle.load(open(fatigue_model, 'rb'))
+                print('Type Model : ', type(model))
+                print('Model : ', model)
+                print('################################################')
                 fatigue_level = model.predict(data)
-                print(fatigue_level)
+                print('Type Fatigue level : ', type(fatigue_level))
+                print('Type Fatigue level : ', fatigue_level)
                 fatigue_level = fatigue_level + 1
-                print(fatigue_level)
 
 
             

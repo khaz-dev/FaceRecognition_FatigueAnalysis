@@ -4,7 +4,7 @@ cmake==3.29.3
 colorama==0.4.6
 contourpy==1.2.1
 cycler==0.12.1
-dlib
+dlib @ https://raw.githubusercontent.com/Billyas/python-dlib/master/dist/dlib-19.23.0-cp39-cp39-win_amd64.whl#sha256=cdfbe186cd37f32f989e84f13cdbb80112bd6c2548a5e4f8c26bae606fe2d101
 face-recognition==1.3.0
 face_recognition_models==0.3.0
 Flask==3.0.3
@@ -26,10 +26,11 @@ pillow==10.3.0
 pyparsing==3.1.2
 python-dateutil==2.9.0.post0
 pytz==2024.1
-scikit-learn==1.4.2
+scikit-learn==1.2.2
 scipy==1.13.0
 six==1.16.0
 threadpoolctl==3.5.0
 tzdata==2024.1
+waitress==3.0.0
 Werkzeug==3.0.3
 zipp==3.18.1

@@ -49,6 +49,7 @@ def show_recognition(image, face_locations, face_names, conf_values):
         face =  cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         face_roi = face[y1:y2, x1:x2]
 
+        name = name.split('/')[-1]
         conf = "{:.2f}".format(conf)
         cv2.putText(image, name,(x1, y1 - 10), cv2.FONT_HERSHEY_DUPLEX, 0.7, (20, 255, 0), 2, lineType=cv2.LINE_AA)
         cv2.rectangle(image, (x1, y1), (x2, y2), (20, 255, 0), 4)
