@@ -3,7 +3,7 @@ colorama==0.4.4
 cycler==0.11.0
 Flask==2.0.3
 fonttools==4.30.0
-cmake @ https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3-linux-x86_64.tar.gz
+cmake @ https://github.com/Kitware/CMake/releases/download/v3.29.3/cmake-3.29.3.tar.gz
 dlib
 face_recognition
 itsdangerous==2.1.1
