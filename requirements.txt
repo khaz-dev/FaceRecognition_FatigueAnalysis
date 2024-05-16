@@ -3,7 +3,7 @@ colorama==0.4.4
 cycler==0.11.0
 Flask==2.0.3
 fonttools==4.30.0
-dlib -vvv
+dlib
 face_recognition
 itsdangerous==2.1.1
 Jinja2==3.0.3
