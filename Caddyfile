@@ -1,7 +1,2 @@
-www.khaz.one {
-    redir https://khaz.one{uri}
-}
-
-khaz.one {
-    reverse_proxy localhost:8000
-}
+www.khaz.one { redir https://khaz.one{uri} } khaz.one { reverse_proxy
+localhost:8000 }
