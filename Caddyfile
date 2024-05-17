@@ -1,3 +1,7 @@
-http://206.189.47.121 {
+www.khaz.one {
+    redir https://khaz.one{uri}
+}
+
+khaz.one {
     reverse_proxy localhost:8000
 }
