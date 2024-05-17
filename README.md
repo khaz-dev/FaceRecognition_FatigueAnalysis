@@ -2,7 +2,7 @@
 
 This face recognition web app is integrated with machine learning model. Here user can upload an image and our machine learning model will analysis your Fatigue level based on data on user_data table in SQLite database.
 
-- **Project URL**:  <https://khaz-facerec-fatigue-analysis.up.railway.app/> (Under Maintanance)
+- **Project URL**:  <https://khaz.one/fatigue_analysis/> (Under Maintanance)
 
 1. Desain Database (Done)
    I design database table to store user data with column :  Person ID, Person, Name, GFender, Age, Occupation, Sleep Duration, Sleep Quality, Physical Activity Level, Stress Level, BMI Category, Blood Pressure, Heart Rate, Daily Steps and Sleep Disorder. You can see detail data on Person Tab.
