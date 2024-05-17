@@ -2,7 +2,7 @@
 
 This face recognition web app is integrated with machine learning model. Here user can upload an image and our machine learning model will analysis your Fatigue level based on data on user_data table in SQLite database.
 
-- **Project URL**:  <https://khaz.one/fatigue_analysis/> (Under Maintanance)
+- **Project URL**:  <https://khaz.one/fatigue_analysis/> (Deployed)
 
 1. Desain Database (Done)
    I design database table to store user data with column :  Person ID, Person, Name, GFender, Age, Occupation, Sleep Duration, Sleep Quality, Physical Activity Level, Stress Level, BMI Category, Blood Pressure, Heart Rate, Daily Steps and Sleep Disorder. You can see detail data on Person Tab.
@@ -12,7 +12,7 @@ This face recognition web app is integrated with machine learning model. Here us
 6. Integrasi Sistem(Done)
 7. Deployment(Done)
    Deployment Aways Error, may be because face_recognition and opencv package, even i got some problem  when want to implement Deep Learning using it without conda.
-My problem i only can deploy on Railway App because it's free, I can deploy it on Server or Cloud server, but I have not enough money and my trial has gone, please understanding.
+My problem i only can deploy on Railway App because it's free, I can deploy it on Server or Cloud server, but I have not enough money and my trial has gone, please understanding. [So now i fix it by using cloud server]
 
 Sorry if i take longer time because i try using all Algorithm Possible,
 and mostly using deep learning hope to get better result but it take long time and much resource
