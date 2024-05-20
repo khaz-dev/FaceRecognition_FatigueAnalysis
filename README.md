@@ -1,6 +1,6 @@
 # Face Recognition Web App
 
-This face recognition web app is integrated with machine learning model. Here user can upload an image and our machine learning model will analysis your Fatigue level based on data on user_data table in SQLite database.
+Face recognition web app is integrated with deep learning model on Face Recognition package. Here user can upload an image and our machine learning model will recognize the user and then analyze your Fatigue level based on data on user_data table in SQLite database.
 
 - **Project URL**:  <https://khaz.one/fatigue_analysis/> (Deployed)
 
