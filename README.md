@@ -1,4 +1,4 @@
-# Face Recognition Web App
+# Face Recognition Fatigue Analysis Web App
 
 Face recognition web app is integrated with deep learning model on Face Recognition package. Here user can upload an image and our machine learning model will recognize the user and then analyze your Fatigue level based on data on user_data table in SQLite database.
 
